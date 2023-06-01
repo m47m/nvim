@@ -1,13 +1,4 @@
-local M = {
-    "nvim-treesitter/nvim-treesitter",
-    build = function()
-        require("nvim-treesitter.install").prefer_git = true
-    end,
-    -- config = function()
-    -- 	require("configs.treesitter").config()	
-    -- end,
-}
-
+local M = {}
 
 function M.config()
 	local status ,ts  = pcall(require , 'nvim-treesitter.config')
@@ -35,4 +26,4 @@ function M.config()
 
 end
 
-return { M }
+return M 
